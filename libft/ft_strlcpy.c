@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/20 08:37:21 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/21 14:52:01 by aklimchu         ###   ########.fr       */
+/*   Created: 2024/04/18 09:54:28 by aklimchu          #+#    #+#             */
+/*   Updated: 2024/05/06 10:34:12 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *format, ...)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	va_list	args;
-	int		count;
+	size_t	lensrc;
+	size_t	i;
 
-	count = 0;
-	va_start(args, format);
-	while (*format)
+	lensrc = ft_strlen(src);
+	i = 0;
+	if (dstsize == 0)
+		return (lensrc);
+	while (i + 1 < dstsize && (*src))
 	{
-		if (*format == '%')
-		{
-			format++;
-			count = ft_printformat(args, *format++, count);
-		}
-		else
-			count = ft_putchar(*format++, count);
-		if (count == -1)
-			return (-1);
+		*dst = *src;
+		dst++;
+		src++;
+		i++;
 	}
-	va_end(args);
-	return (count);
+	*dst = 0;
+	return (lensrc);
 }

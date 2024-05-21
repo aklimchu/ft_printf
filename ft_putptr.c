@@ -1,36 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/20 08:37:21 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/21 14:52:01 by aklimchu         ###   ########.fr       */
+/*   Created: 2024/05/21 14:00:04 by aklimchu          #+#    #+#             */
+/*   Updated: 2024/05/21 14:10:42 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_printf(const char *format, ...)
+int	ft_putptr(void *ptr, int count)
 {
-	va_list	args;
-	int		count;
+	unsigned long	addr;
+	char			buffer[20];
+	char			*p;
+	char			*hex_digits;
 
-	count = 0;
-	va_start(args, format);
-	while (*format)
+	hex_digits = "0123456789abcdef";
+	addr = (unsigned long)ptr;
+	p = buffer + sizeof(buffer) - 1;
+	*p = '\0';
+	if (!addr)
+		*--p = '0';
+	while (addr)
 	{
-		if (*format == '%')
-		{
-			format++;
-			count = ft_printformat(args, *format++, count);
-		}
-		else
-			count = ft_putchar(*format++, count);
-		if (count == -1)
-			return (-1);
+		*--p = hex_digits[addr % 16];
+		addr /= 16;
 	}
-	va_end(args);
-	return (count);
+	*--p = 'x';
+	*--p = '0';
+	if (ft_putstr(p, count) == -1)
+		return (-1);
+	return (count + ft_strlen(p));
 }

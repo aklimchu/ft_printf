@@ -1,36 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/20 08:37:21 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/21 14:52:01 by aklimchu         ###   ########.fr       */
+/*   Created: 2024/04/18 15:24:24 by aklimchu          #+#    #+#             */
+/*   Updated: 2024/05/06 10:35:26 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *format, ...)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	va_list	args;
-	int		count;
+	size_t	i;
 
-	count = 0;
-	va_start(args, format);
-	while (*format)
+	i = 0;
+	while (*s1 && *s2 && i < n)
 	{
-		if (*format == '%')
-		{
-			format++;
-			count = ft_printformat(args, *format++, count);
-		}
-		else
-			count = ft_putchar(*format++, count);
-		if (count == -1)
+		if (*(unsigned char *) s1 > *(unsigned char *) s2)
+			return (1);
+		if (*(unsigned char *) s1 < *(unsigned char *) s2)
 			return (-1);
+		s1++;
+		s2++;
+		i++;
 	}
-	va_end(args);
-	return (count);
+	if (i < n && *(unsigned char *) s1 > *(unsigned char *) s2)
+		return (1);
+	if (i < n && *(unsigned char *) s1 < *(unsigned char *) s2)
+		return (-1);
+	return (0);
 }

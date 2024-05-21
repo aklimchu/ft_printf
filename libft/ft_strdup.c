@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/20 08:37:21 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/21 14:52:01 by aklimchu         ###   ########.fr       */
+/*   Created: 2024/04/19 14:58:15 by aklimchu          #+#    #+#             */
+/*   Updated: 2024/05/06 10:32:00 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include <stdlib.h>
+#include <errno.h>
+#include "libft.h"
 
-int	ft_printf(const char *format, ...)
+char	*ft_strdup(const char *s1)
 {
-	va_list	args;
-	int		count;
+	char	*arr;
+	size_t	slen;
 
-	count = 0;
-	va_start(args, format);
-	while (*format)
+	slen = ft_strlen(s1);
+	arr = (char *)malloc((slen + 1) * sizeof(char));
+	if (arr == NULL)
 	{
-		if (*format == '%')
-		{
-			format++;
-			count = ft_printformat(args, *format++, count);
-		}
-		else
-			count = ft_putchar(*format++, count);
-		if (count == -1)
-			return (-1);
+		errno = ENOMEM;
+		return ((void *) 0);
 	}
-	va_end(args);
-	return (count);
+	while (*s1)
+	{
+		*arr = *s1;
+		arr++;
+		s1++;
+	}
+	*arr = 0;
+	return (arr - slen);
 }

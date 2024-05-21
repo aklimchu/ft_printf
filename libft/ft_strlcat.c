@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/20 08:37:21 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/21 14:52:01 by aklimchu         ###   ########.fr       */
+/*   Created: 2024/04/18 10:28:35 by aklimchu          #+#    #+#             */
+/*   Updated: 2024/05/06 10:33:22 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *format, ...)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	va_list	args;
-	int		count;
+	size_t	totallen;
+	size_t	i;
+	size_t	dstlen;
 
-	count = 0;
-	va_start(args, format);
-	while (*format)
+	i = 0;
+	totallen = ft_strlen(dst) + ft_strlen(src);
+	dstlen = ft_strlen(dst);
+	if (dstsize < dstlen)
+		return (dstsize + ft_strlen(src));
+	while (*dst)
+		dst++;
+	while (i + 1 < dstsize - dstlen && *src)
 	{
-		if (*format == '%')
-		{
-			format++;
-			count = ft_printformat(args, *format++, count);
-		}
-		else
-			count = ft_putchar(*format++, count);
-		if (count == -1)
-			return (-1);
+		*dst = *src;
+		dst++;
+		src++;
+		i++;
 	}
-	va_end(args);
-	return (count);
+	*dst = '\0';
+	return (totallen);
 }

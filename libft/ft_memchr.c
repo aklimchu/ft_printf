@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/20 08:37:21 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/21 14:52:01 by aklimchu         ###   ########.fr       */
+/*   Created: 2024/04/19 09:11:44 by aklimchu          #+#    #+#             */
+/*   Updated: 2024/05/06 10:25:45 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *format, ...)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	va_list	args;
-	int		count;
+	size_t			i;
+	unsigned char	new_c;
 
-	count = 0;
-	va_start(args, format);
-	while (*format)
+	new_c = c;
+	i = 0;
+	while (i < n)
 	{
-		if (*format == '%')
-		{
-			format++;
-			count = ft_printformat(args, *format++, count);
-		}
-		else
-			count = ft_putchar(*format++, count);
-		if (count == -1)
-			return (-1);
+		if (*(unsigned char *) s == new_c)
+			return ((unsigned char *) s);
+		s++;
+		i++;
 	}
-	va_end(args);
-	return (count);
+	return ((void *) 0);
 }
