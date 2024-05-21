@@ -6,7 +6,7 @@
 #    By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 11:18:05 by aklimchu          #+#    #+#              #
-#    Updated: 2024/05/21 14:04:39 by aklimchu         ###   ########.fr        #
+#    Updated: 2024/05/21 15:32:14 by aklimchu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ $(NAME):	$(OBJ)
 	$(AR) $(NAME) $(OBJ)		# add ft_printf.o to libftprintf.a
 
 clean:
-	$(RM) $(OBJ) libft.a
+	$(RM) $(OBJ) $(LIBFT_LIB)
 	@make clean -C $(LIBFT_DIR)
 
 fclean:		clean 
