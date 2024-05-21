@@ -1,36 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/20 08:37:21 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/21 14:52:01 by aklimchu         ###   ########.fr       */
+/*   Created: 2024/04/19 14:13:55 by aklimchu          #+#    #+#             */
+/*   Updated: 2024/05/06 13:26:42 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include <errno.h>
+#include <stdlib.h>
 
-int	ft_printf(const char *format, ...)
+void	*ft_calloc(size_t count, size_t size)
 {
-	va_list	args;
-	int		count;
+	void	*arr;
+	size_t	i;
 
-	count = 0;
-	va_start(args, format);
-	while (*format)
+	if (count && size && SIZE_MAX / size < count)
+		return ((void *) 0);
+	arr = (void *)malloc(count * size);
+	if (arr == NULL)
 	{
-		if (*format == '%')
-		{
-			format++;
-			count = ft_printformat(args, *format++, count);
-		}
-		else
-			count = ft_putchar(*format++, count);
-		if (count == -1)
-			return (-1);
+		errno = ENOMEM;
+		return ((void *) 0);
 	}
-	va_end(args);
-	return (count);
+	i = 0;
+	while (i < count * size)
+	{
+		*(unsigned char *)arr = 0;
+		arr++;
+		i++;
+	}
+	return (arr - count * size);
 }

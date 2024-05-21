@@ -1,36 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/20 08:37:21 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/21 14:52:01 by aklimchu         ###   ########.fr       */
+/*   Created: 2024/04/17 13:46:17 by aklimchu          #+#    #+#             */
+/*   Updated: 2024/05/06 11:18:24 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf(const char *format, ...)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	va_list	args;
-	int		count;
+	size_t	i;
+	int		*p;
 
-	count = 0;
-	va_start(args, format);
-	while (*format)
+	i = 0;
+	p = NULL;
+	if (dst == NULL && src != NULL)
+		*p = 10;
+	if (dst == NULL && src == NULL)
+		return ((void *) 0);
+	while (i < n)
 	{
-		if (*format == '%')
-		{
-			format++;
-			count = ft_printformat(args, *format++, count);
-		}
-		else
-			count = ft_putchar(*format++, count);
-		if (count == -1)
-			return (-1);
+		*(unsigned char *)dst = *(unsigned char *)src;
+		dst++;
+		src++;
+		i++;
 	}
-	va_end(args);
-	return (count);
+	return (dst - i);
 }
