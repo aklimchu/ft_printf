@@ -1,5 +1,5 @@
 # ft_printf
-The goal of the project was to recode printf() function from lib.c.
+The goal of the project was to recode printf() function from libc.
 I was using variadic function and my project is able to handle 
 the following conversions: cspdiuxX%.
 
