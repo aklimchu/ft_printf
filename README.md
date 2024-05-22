@@ -26,3 +26,5 @@ cc libftprintf.a main.c
 make fclean
 <!-- end:code block -->
 
+## License
+This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the LICENSE.md file for details
