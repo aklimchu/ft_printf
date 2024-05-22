@@ -8,6 +8,7 @@ the following conversions: cspdiuxX%.
 <!-- start:code block -->
 #### Clone this repository
 git clone https://github.com/aklimchu/ft_printf.git
+
 cd ft_printf
 
 <!-- end:code block -->
