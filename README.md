@@ -19,7 +19,7 @@ cd ft_printf
 #### Create the library with Makefile
 make
 
-#### Test the library with your own "main"
+#### Test the library with your my "main" or create your own
 cc libftprintf.a main.c
 
 #### Clean the object files and library file
