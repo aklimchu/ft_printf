@@ -5,10 +5,8 @@ the following conversions: cspdiuxX%.
 
 ## Installation
 
-First, clone this repository:
-
 <!-- start:code block -->
-### Clone this repository
+#### Clone this repository
 git clone https://github.com/aklimchu/ft_printf.git
 cd ft_printf
 
@@ -17,13 +15,13 @@ cd ft_printf
 ## Running the tests
 
 <!-- start:code block -->
-### Create the library with Makefile
+#### Create the library with Makefile
 make
 
-### Test the library with your own "main"
+#### Test the library with your own "main"
 cc libftprintf.a main.c
 
-### Clean the object files and library file
+#### Clean the object files and library file
 make fclean
 <!-- end:code block -->
 
