@@ -6,7 +6,7 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 14:00:32 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/21 14:01:01 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 08:10:25 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@ int	ft_puthex(int num, char lower_case, int count)
 {
 	char			buffer[17];
 	char			*p;
-	char			hex_digits[17];
+	char			*hex_digits;
 	unsigned int	unsigned_num;
 
-	ft_strlcpy(hex_digits, "0123456789abcdef", 17);
-	if (lower_case == 'X')
-		ft_strlcpy(hex_digits, "0123456789ABCDEF", 17);
+	if (lower_case == 'x')
+		hex_digits = "0123456789abcdef";
+	else
+		hex_digits = "0123456789ABCDEF";
 	unsigned_num = (unsigned int)num;
 	p = buffer + sizeof(buffer) - 1;
 	*p = '\0';
