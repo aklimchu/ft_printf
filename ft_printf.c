@@ -6,7 +6,7 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 08:37:21 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/21 14:52:01 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 08:35:54 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,8 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
+
+// the variadic function receives the arguments (args is
+// a pointer to the last fixed argument) and passes them
+// to ft_printfformat for further processing
+// "count" is a variable used for counting the number of printed characters

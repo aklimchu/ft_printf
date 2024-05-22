@@ -6,7 +6,7 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 14:00:32 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/22 08:10:25 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 08:37:58 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,3 +38,7 @@ int	ft_puthex(int num, char lower_case, int count)
 	}
 	return (ft_putstr(p, count));
 }
+
+// the function converts number to unsigned integer
+// and then prints it hexadecimal (base 16) lowercase
+// or uppercase format depending on the requirements.

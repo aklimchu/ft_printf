@@ -6,7 +6,7 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:57:51 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/21 14:02:24 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 08:38:47 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,5 @@ int	ft_putnbr(int nb, int count)
 	count = ft_putnbr_ui(nb, count);
 	return (count);
 }
+
+// the function prints an integer in base 10
