@@ -6,11 +6,11 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/17 13:04:46 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/04/17 14:01:10 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 13:05:58 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

@@ -6,12 +6,11 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 14:13:55 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/06 13:26:42 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 12:58:04 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <errno.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -22,10 +21,7 @@ void	*ft_calloc(size_t count, size_t size)
 		return ((void *) 0);
 	arr = (void *)malloc(count * size);
 	if (arr == NULL)
-	{
-		errno = ENOMEM;
 		return ((void *) 0);
-	}
 	i = 0;
 	while (i < count * size)
 	{

@@ -6,11 +6,10 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 12:34:13 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/06 10:35:08 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 13:23:44 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

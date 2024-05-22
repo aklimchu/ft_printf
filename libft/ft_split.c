@@ -6,11 +6,10 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 11:28:07 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/06 10:31:08 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 13:01:53 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static void	free_m(char **new_s, size_t i)

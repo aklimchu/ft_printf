@@ -6,7 +6,7 @@
 #    By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/24 11:18:05 by aklimchu          #+#    #+#              #
-#    Updated: 2024/05/22 09:15:53 by aklimchu         ###   ########.fr        #
+#    Updated: 2024/05/22 12:39:58 by aklimchu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ RM			= rm -f
 # Source / OBJ files / Includes
 SRC 		= ft_printf.c ft_printformat.c ft_putchar.c \
 			  ft_puthex.c ft_putnbr.c ft_putnbr_ui.c \
-			  ft_putptr.c ft_putstr.c
+			  ft_putptr.c ft_putstr.c ft_checkchar.c
 OBJ 		= $(SRC:.c=.o)
 INCLUDE		= ft_print.h
 
@@ -38,11 +38,11 @@ $(NAME):	$(OBJ)
 	$(AR) $(NAME) $(OBJ)		# add ft_printf.o to libftprintf.a
 
 clean:
-	$(RM) $(OBJ) $(LIBFT_LIB)
+	$(RM) $(OBJ) 
 	@make clean -C $(LIBFT_DIR)
 
 fclean:		clean 
-	$(RM) $(NAME)
+	$(RM) $(NAME) $(LIBFT_LIB)
 
 re: 		fclean all
 

@@ -6,11 +6,10 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 10:42:28 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/06 10:37:32 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 13:03:53 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 static size_t	checkc(char c, char const *set)

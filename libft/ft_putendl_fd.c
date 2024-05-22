@@ -6,11 +6,10 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 15:57:14 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/06 10:28:55 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 13:01:19 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)

@@ -6,11 +6,10 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 09:00:40 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/06 12:34:49 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 12:59:42 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 t_list	*ft_lstnew(void *content)
