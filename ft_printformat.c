@@ -6,7 +6,7 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:52:09 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/21 14:09:56 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 08:31:12 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,7 @@ int	ft_printformat(va_list args, char format, int count)
 		count = ft_putchar('%', count);
 	return (count);
 }
+
+// the function processes the arguments of the variadic function
+// and calls helper function to print the argument depanding on the
+// type of the argument

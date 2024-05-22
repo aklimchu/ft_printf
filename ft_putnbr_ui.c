@@ -6,7 +6,7 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:58:25 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/21 14:02:40 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 08:39:23 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,5 @@ int	ft_putnbr_ui(unsigned int nb, int count)
 	}
 	return (count);
 }
+
+// the function prints an unsigned decimal (base 10) number.

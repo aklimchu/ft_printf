@@ -6,7 +6,7 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 14:00:04 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/21 14:10:42 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 08:40:39 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,5 @@ int	ft_putptr(void *ptr, int count)
 		return (-1);
 	return (count + ft_strlen(p));
 }
+
+// the funtion prints (void *) pointer argument in hexadecimal format
