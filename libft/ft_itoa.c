@@ -6,11 +6,11 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 08:29:58 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/06 10:19:07 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 12:57:32 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 static size_t	countd(int n)
 {

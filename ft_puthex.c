@@ -6,37 +6,37 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 14:00:32 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/22 08:37:58 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 12:13:19 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_puthex(int num, char lower_case, int count)
+int	ft_puthex(int num, char x_case, int count)
 {
 	char			buffer[17];
-	char			*p;
+	char			*ptr;
 	char			*hex_digits;
 	unsigned int	unsigned_num;
 
-	if (lower_case == 'x')
+	if (x_case == 'x')
 		hex_digits = "0123456789abcdef";
 	else
 		hex_digits = "0123456789ABCDEF";
 	unsigned_num = (unsigned int)num;
-	p = buffer + sizeof(buffer) - 1;
-	*p = '\0';
+	ptr = buffer + sizeof(buffer) - 1;
+	*ptr = '\0';
 	if (unsigned_num == 0)
-		*--p = '0';
+		*--ptr = '0';
 	else
 	{
 		while (unsigned_num > 0)
 		{
-			*--p = hex_digits[unsigned_num % 16];
+			*--ptr = hex_digits[unsigned_num % 16];
 			unsigned_num /= 16;
 		}
 	}
-	return (ft_putstr(p, count));
+	return (ft_putstr(ptr, count));
 }
 
 // the function converts number to unsigned integer

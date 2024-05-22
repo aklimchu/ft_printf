@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_checkchar.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/23 15:52:05 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/22 13:01:36 by aklimchu         ###   ########.fr       */
+/*   Created: 2024/05/22 12:33:38 by aklimchu          #+#    #+#             */
+/*   Updated: 2024/05/22 12:52:06 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putstr_fd(char *s, int fd)
+int	ft_checkchar(char format)
 {
-	write(fd, s, ft_strlen(s));
-	return ;
+	char	*set;
+
+	set = "cspdiuxX%";
+	while (*set)
+	{
+		if (*set == format)
+			return (1);
+		set++;
+	}
+	return (0);
 }

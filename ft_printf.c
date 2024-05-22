@@ -6,7 +6,7 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 08:37:21 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/22 08:35:54 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 12:50:01 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_printf(const char *format, ...)
 	va_start(args, format);
 	while (*format)
 	{
-		if (*format == '%')
+		if (*format == '%' && ft_checkchar(*(format + 1)) == 1)
 		{
 			format++;
 			count = ft_printformat(args, *format++, count);

@@ -6,7 +6,7 @@
 /*   By: aklimchu <aklimchu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 12:43:20 by aklimchu          #+#    #+#             */
-/*   Updated: 2024/05/06 08:05:29 by aklimchu         ###   ########.fr       */
+/*   Updated: 2024/05/22 13:00:58 by aklimchu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdlib.h>
+# include <unistd.h>
 
 typedef struct s_list
 {
