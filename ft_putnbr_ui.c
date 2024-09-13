@@ -12,6 +12,7 @@
 
 #include "ft_printf.h"
 
+//The function prints an unsigned decimal (base 10) number
 int	ft_putnbr_ui(unsigned int nb, int count)
 {
 	if (nb >= 10)
@@ -31,5 +32,3 @@ int	ft_putnbr_ui(unsigned int nb, int count)
 	}
 	return (count);
 }
-
-// the function prints an unsigned decimal (base 10) number.

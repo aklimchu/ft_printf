@@ -12,6 +12,7 @@
 
 #include "ft_printf.h"
 
+//The function prints a string
 int	ft_putstr(char *str, int count)
 {
 	if (!str)
@@ -29,5 +30,3 @@ int	ft_putstr(char *str, int count)
 	}
 	return (count);
 }
-
-// the funciton prints a string

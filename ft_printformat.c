@@ -12,6 +12,9 @@
 
 #include "ft_printf.h"
 
+//The function processes the arguments of the variadic function
+//and calls helper function to print the argument depanding on the
+//type of the argument
 int	ft_printformat(va_list args, char format, int count)
 {
 	char	ch;
@@ -35,7 +38,3 @@ int	ft_printformat(va_list args, char format, int count)
 		count = ft_putchar('%', count);
 	return (count);
 }
-
-// the function processes the arguments of the variadic function
-// and calls helper function to print the argument depanding on the
-// type of the argument

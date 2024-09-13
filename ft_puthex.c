@@ -12,6 +12,8 @@
 
 #include "ft_printf.h"
 
+//The function converts number to unsigned integer and then prints it hexadecimal
+//(base 16) lowercase or uppercase format depending on the requirements.
 int	ft_puthex(int num, char x_case, int count)
 {
 	char			buffer[17];
@@ -38,7 +40,3 @@ int	ft_puthex(int num, char x_case, int count)
 	}
 	return (ft_putstr(ptr, count));
 }
-
-// the function converts number to unsigned integer
-// and then prints it hexadecimal (base 16) lowercase
-// or uppercase format depending on the requirements.

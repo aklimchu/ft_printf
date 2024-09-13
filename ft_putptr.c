@@ -12,6 +12,7 @@
 
 #include "ft_printf.h"
 
+//The funtion prints (void *) pointer argument in hexadecimal format
 int	ft_putptr(void *ptr, int count)
 {
 	unsigned long	addr;
@@ -36,5 +37,3 @@ int	ft_putptr(void *ptr, int count)
 		return (-1);
 	return (count + ft_strlen(buff_ptr));
 }
-
-// the funtion prints (void *) pointer argument in hexadecimal format
