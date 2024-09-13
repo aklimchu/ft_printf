@@ -1,30 +1,43 @@
 # ft_printf
-The goal of the project was to recode printf() function from libc.
-I was using variadic function and my project is able to handle 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://opensource.org/licenses/GPL-3.0)
+The goal of the project was to recode printf() function from libc. I was using variadic function and my project is able to handle 
 the following conversions: cspdiuxX%.
 
-## Installation
+## ✨ Features
 
-<!-- start:code block -->
-#### Clone this repository
+## 📚 Table of Contents
+
+## 🚀 Installation!
+
+Clone the repository and navigate to the project directory:
+```bash
 git clone https://github.com/aklimchu/ft_printf.git
-
 cd ft_printf
+```
+## 🛠️ Build the Program!
 
-<!-- end:code block -->
-
-## Running the tests
-
-<!-- start:code block -->
-#### Create the library with Makefile
+### Use `make` command to create the program:
+```bash
 make
+```
 
-#### Test the library with your my "main" or create your own
-cc libftprintf.a main.c
+## 🎮 Running the Program
 
-#### Clean the object files and library file
+* #### ft_printf:
+```bash
+cc main.c printf.a
+```
+*(you can use the tests provided or create your own tests)*
+
+## 🧹 Cleaning Up
+
+To remove object files and libraries:
+```bash
 make fclean
-<!-- end:code block -->
+```
+## License
+
+This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the LICENSE.md file for details
 
 ## License
 This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the LICENSE.md file for details
