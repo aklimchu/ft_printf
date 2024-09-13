@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 # Variable
-NAME		= libftprintf.a
+NAME		= printf.a
 LIBFT_DIR	= libft
 LIBFT_LIB	= $(LIBFT_DIR)/libft.a
 CC 			= cc
