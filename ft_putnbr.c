@@ -12,6 +12,7 @@
 
 #include "ft_printf.h"
 
+//The function prints an integer in base 10
 int	ft_putnbr(int nb, int count)
 {
 	if (nb == -2147483648)
@@ -34,5 +35,3 @@ int	ft_putnbr(int nb, int count)
 	count = ft_putnbr_ui(nb, count);
 	return (count);
 }
-
-// the function prints an integer in base 10

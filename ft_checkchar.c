@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//The function checks if the character belongs to the given set of characters
 int	ft_checkchar(char format)
 {
 	char	*set;

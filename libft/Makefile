@@ -44,7 +44,7 @@ OBJ = $(SRC:.c=.o)
 
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
 
-INCLUDE = libft.h
+INCLUDE = ./
 
 all: $(NAME)
 

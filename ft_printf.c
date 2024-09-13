@@ -12,6 +12,9 @@
 
 #include "ft_printf.h"
 
+//The variadic function receives the arguments (args is a pointer to the last
+//fixed argument) and passes them to ft_printfformat for further processing
+//"count" is a variable used for counting the number of printed characters
 int	ft_printf(const char *format, ...)
 {
 	va_list	args;
@@ -34,8 +37,3 @@ int	ft_printf(const char *format, ...)
 	va_end(args);
 	return (count);
 }
-
-// the variadic function receives the arguments (args is
-// a pointer to the last fixed argument) and passes them
-// to ft_printfformat for further processing
-// "count" is a variable used for counting the number of printed characters
