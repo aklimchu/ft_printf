@@ -1,9 +1,11 @@
 # ft_printf
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://opensource.org/licenses/GPL-3.0)
-The goal of the project was to recode printf() function from libc. I was using variadic function and my project is able to handle 
-the following conversions: cspdiuxX%.
+A custom printf implementations, where I have recreated the classic printf() function from libc. The project utilizes variadic functions and is capable of handling a variety of format specifiers, including: c, s, p, d, i, u, x, X, and %.
 
 ## ✨ Features
+- Experience the core functionality of printf() from scratch.
+- Supports a wide range of format specifiers.
+- Designed to manage various edge cases.
 
 ## 📚 Table of Contents
 
